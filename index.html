@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Best Five</title>
+
+    <!-- style link here  -->
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <!-- header start here  -->
+    <header class="bg-black">
+        <div class="flex justify-between">
+            <div>
+                <img class="object-contain h-96 w-96" src="image/pngegg.png" alt="">
+            </div>
+            <div class="pt-20 px-10 text-center">
+                <h1 class="text-orange-400 text-7xl font-style">Select Your Best Player</h1>
+                <p class="text-white pt-5 uni-font">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat quo
+                    mollitia sed et sunt voluptatem! Iusto voluptates, quam corporis aspernatur odio eaque placeat dicta
+                    vel veritatis, alias voluptas mollitia consectetur!</p>
+            </div>
+            <div>
+                <img class="object-contain h-96 w-96" src="image/de-maria-cover.png" alt="">
+            </div>
+        </div>
+    </header>
+    <!-- header end here  -->
+
+    <main class="bg-gray-500 px-5">
+        <div class="container mx-auto p-5">
+                <div class="flex flex-wrap -mx-2">
+                    <!-- player section  -->
+                    <div class="w-full md:w-3/4 px-2">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <!-- Player Card Template -->
+                            <div class="bg-gray-800 p-4 rounded shadow">
+                                <img src="image/messi.jpg" alt="Lionel Messi" class="w-full h-48 object-fill rounded">
+                                <h5 id="name-messi" class="text-xl text-center text-white font-bold mt-4">Lionel Messi</h5>
+                                <p class="text-gray-400 text-center">36 Goals | 120 Assists</p>
+                                <button id="btn-messi" class="selectable-button mt-4 bg-blue-500 hover:bg-blue-300 text-white py-2 px-4 rounded">Select</button>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded shadow">
+                                <img src="image/de-maria.jpg" alt="Lionel Messi" class="w-full h-48 object-fill rounded">
+                                <h5 id="name-demari" class="text-xl text-white font-bold mt-4">De Maria</h5>
+                                <p class="text-gray-400">36 Goals | 120 Assists</p>
+                                <button id="btn-demari" class="selectable-button mt-4 bg-blue-500 hover:bg-blue-300 text-white py-2 px-4 rounded">Select</button>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded shadow">
+                                <img src="image/lautaro.jpg" alt="Lionel Messi" class="w-full h-48 object-fill rounded">
+                                <h5 id="name-lautaro" class="text-xl text-white font-bold mt-4">Lautaro Martinez</h5>
+                                <p class="text-gray-400">36 Goals | 120 Assists</p>
+                                <button id="btn-lautaro" class="selectable-button mt-4 bg-blue-500 hover:bg-blue-300 text-white py-2 px-4 rounded">Select</button>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded shadow">
+                                <img src="image/alvarez.jpg" alt="Lionel Messi" class="w-full h-48 object-fill rounded">
+                                <h5 id="name-alvarez" class="text-xl text-white font-bold mt-4">Julian Alvarez</h5>
+                                <p class="text-gray-400">36 Goals | 120 Assists</p>
+                                <button id="btn-alvarez" class="selectable-button mt-4 bg-blue-500 hover:bg-blue-300 text-white py-2 px-4 rounded">Select</button>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded shadow">
+                                <img src="image/mac-allister.webp" alt="Lionel Messi" class="w-full h-48 object-fill rounded">
+                                <h5 class="text-xl text-white font-bold mt-4">Macallister</h5>
+                                <p class="text-gray-400">36 Goals | 120 Assists</p>
+                                <button class="selectable-button mt-4 bg-blue-500 hover:bg-blue-300 text-white py-2 px-4 rounded">Select</button>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded shadow">
+                                <img src="image/emi-martinez.jpg" alt="Lionel Messi" class="w-full h-48 object-fill rounded">
+                                <h5 class="text-xl text-white font-bold mt-4">Eimi Martinez</h5>
+                                <p class="text-gray-400">36 Goals | 120 Assists</p>
+                                <button class="selectable-button mt-4 bg-blue-500 hover:bg-blue-300 text-white py-2 px-4 rounded">Select</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- for selection form -->
+                    <div class="w-full md:w-1/4 px-2 mt-4 md:mt-0">
+                        <div class="bg-gray-800 p-4 rounded shadow mb-4">
+                            <h4 class="text-xl font-bold mb-4 text-white">Selected - Player</h4>
+                            <ul class="list-decimal pl-5 text-gray-400">
+                                <li id="player-1">player 1</li>
+                                <li id="player-2">player 2</li>
+                                <li id="player-3">player 3</li>
+                                <li id="player-4">player 4</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-800 p-4 rounded shadow">
+                            <h4 class="text-xl font-bold mb-4 text-white">Budget</h4>
+                            <form>
+                                <div class="mb-4">
+                                    <label for="perPlayer" class="block text-gray-400">Per Player</label>
+                                    <input type="number" id="perPlayer" class="w-full p-2 border border-gray-600 rounded bg-gray-700 text-white" value="">
+                                </div>
+                                <button id="btn-calculate" type="button" class="w-full bg-blue-500 text-white py-2 px-4 rounded mb-4 hover:bg-blue-300">Calculate</button>
+                                <div class="mb-4">
+                                    <label for="playerExpenses" class="block text-gray-400">Player Expenses</label>
+                                    <p id="display-p-ex" class="text-white"></p>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="manager" class="block text-gray-400">Manager</label>
+                                    <input id="input-manager" type="number" class="w-full p-2 bg-gray-700 border-gray-600 rounded text-white">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="coach" class="block text-gray-400">Coach</label>
+                                    <input id="input-coach" type="number" class="w-full p-2 bg-gray-700 border-gray-600 rounded text-white">
+                                </div>
+                                <button id="btn-total" type="button" class="w-full bg-blue-500 text-white py-2 px-4 rounded mb-4 hover:bg-blue-300">Calculate Total</button>
+                                <div class="mb-4">
+                                    <label for="total" class="block text-gray-400">Total</label>
+                                    <p id="display-total" class="text-white">00</p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                </div>
+        </div>
+    </main>
+    <footer class="bg-gray-500 py-10 mt-1">
+        <h4 class="text-white text-center">All rights reserve||2024</h4>
+    </footer>
+    <script src="js/button.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/budget.js"></script>
+</body>
+
+</html>
